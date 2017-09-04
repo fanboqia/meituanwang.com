@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<title>美团网</title>	
+<style type="text/css">
+
+.switchContainer{
+	width: 1280px;
+	height: 705px;
+	border: #ddd solid 1px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.switchHead{
+	position: relative;
+	border: #ddd solid 1px;
+	padding:14px 15px;
+	font-size: 14px;
+	background: #c1af8c;
+	color: white;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+}
+
+.switchHead span{
+	margin-left: 10px;
+}
+
+.picGroup img{
+	width:370px;
+	height: 210px;
+}
+
+/*图片组切换*/
+.picGroup{
+	display: none;
+}
+
+/*每个图片部分*/
+.partPic{
+	width:391px;
+	height:315px;
+	float: left;
+	/*border: solid #ddd 1px;*/
+	margin: 5px;
+	background: white;
+	border-radius: 5px;
+	transition: 0.4s;
+}
+
+.partPic img{
+	margin:10px;
+	border-radius: 5px;
+}
+
+.partPic:hover{
+	background: #f4f4f4;
+}
+
+.partPic p{
+	margin-top: -8px;
+	padding-left: 10px;
+}
+
+.midP{
+	color:grey;
+	font-size: 12px;
+}
+
+.partPic p:last-child{
+	color:#c1af8c;
+	font-size: 24px;
+}
+
+.partPic p:last-child span{
+	font-size: 12px;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+//选择卡部分
+function display(event){
+
+	//先全部关闭
+	var picGr = document.getElementsByClassName("picGroup");
+	//console.log(picGr);
+	for (var i = picGr.length - 1; i >= 0; i--) {
+		picGr[i].style.display = "none";
+	}
+
+	//找到是哪个span对应的picGroup
+	var switchH = document.getElementsByTagName("span");
+	var index = 0;
+
+	// console.log(switchH);
+	// console.log(switchH[1]);
+	// console.log(event.target);
+
+	for (var j = switchH.length - 1; j >= 0; j--) {
+		//console.log(index);
+		if(event.target == switchH[j]){
+			index = j;
+//			console.log(index);
+		}
+	}
+
+	// 显示对应的图片
+	picGr[index].style.display = "block";
+}
+
+</script>
+</head>
+<body>
+	
+<div class="switchContainer">
+<div class="switchHead">
+	<img style = "width: 67px; height: 30px; position: relative; top: 4px;" src="../images/gediao.png" alt="格调">
+	<span onmouseenter="display(event)">全部</span>
+	<span onmouseenter="display(event)">约会聚餐</span>
+	<span onmouseenter="display(event)">丽人SPA</span>
+	<span onmouseenter="display(event)">电影演出</span>
+	<span onmouseenter="display(event)">品质出游</span>
+</div>
+<div class="switchContent">
+	<div class="picGroup" style = "display: block;">
+	<div class = "partPic">
+		<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+
+	<div class="picGroup">
+	<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+	<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+
+	<div class="picGroup">
+	<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+	<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+
+	<div class="picGroup">
+			<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+	<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+			<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+
+	<div class="picGroup">
+	<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+	<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+			<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<title>美团网</title>	
+<link href="header.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="common.css">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<script type="text/javascript" src = "../js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	//搜索框被点击时显示
+	$('#searchBar').click(function(){
+		$(".searchPopUp").toggle();
+	});
+});
+
+</script>
+</head>
+<body>
+<!--头部导航页-->
+<div class = "header">
+	<div class="headLeft">
+		<ul class = "headLeftUl">
+			<li><a href="">收藏美团</a></li>
+			<li><a href=""><span class = "orangeFontColor">登陆</span></a></li>
+			<li><a href="">注册</a></li>
+		</ul>
+	</div>
+	<div class="headRight">
+		<ul class = "headRightUl">
+			<li><a href="">我的订单</a></li>
+			<li class = "toggleLi">
+				<a href="" class = "toggleA">我的美团
+				<div class = "toggleUl">
+				<ul>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">我的评价</a></li>
+					<li><a href="">我的收藏</a></li>
+					<li><a href="">抵用卷</a></li>
+					<li><a href="">我的余额</a></li>
+					<li><a href="">账户设置</a></li>
+				</ul>
+				</div>
+				</a>
+			</li>
+			<li><a href="">最近浏览</a></li>
+			<li><a href="">联系客服</a></li>
+			<li><a href="">我是商家</a></li>
+			<li><a href="">代理商招募</a></li>
+			<li><a href="">更多</a></li>
+		</ul>
+	</div></div>	
+<!--搜索部分-->
+	<!--1.图片 搜索栏 3张图片-->
+<div class = "searchPart"> 
+	<img style = "width: 124px;height: 48px; position: absolute; top: 71px; left: 95px;" src="../images/icon_Mei.png" alt="美团">
+	<input id = "searchBar" type="text" placeholder="搜索商家或地点">
+	<div class = "searchPopUp" id = "popUpId">
+	<p>热门搜索</p>
+	<a href="">华莱士</a>
+	<a href="">蛋糕</a>
+	<a href="">四海一家</a>
+	<a href="">猪肚鸡</a>
+	<a href="">自助</a>
+	<a href="">仟吉</a>
+	<a href="">牛排</a>
+	<a href="">哈根达斯</a>
+	</div>
+	<div class="searchUnderText">
+	<a href="">华莱士</a>
+	<a href="">蛋糕</a>
+	<a href="">四海一家</a>
+	<a href="">猪肚鸡</a>
+	<a href="">自助</a>
+	<a href="">仟吉</a>
+	<a href="">牛排</a>
+	<a href="">哈根达斯</a>
+	</div>
+	<img style = "width: 88px; height: 47px; position: absolute; top: 69px; left: 833px;" src="../images/searchImg.png" alt="美团">
+	<img style = "width: 155px;height: 39px; float:right; margin-top: 39px; margin-right: 62px;" src="../images/searchRight_Icon.png" alt="承诺">
+	
+	<div class = "selectionLeftUpPart">
+		<p>全部分类</p>
+	</div>
+
+	<div class="classify"><a href="" id = "a1">美团外卖</a><a href="" id = "a2">猫眼电影</a><a href="">商家入驻</a></div>
+
+</div>
+<!--选项卡部分-->
+<div class="selection">
+	<!--height:438px-->
+	<div class="leftSelection">
+		<ul>
+			<li class = "toggleId">
+			<a href="" class = "toggleAId">
+			美食
+				<div class="toggleContent">
+				<!--头-->
+					<div class = "idHead">
+					<a href="" class = "idHeadLeft">美食</a>
+					<a href="" class = "idHeadRight">更多 &rsaquo;</a>
+					</div>
+				<!--内容-->
+					<div class = "idContent">
+					<a href="">代金券</a>
+					<a href="">甜点</a>
+					<a href="">饮品</a>
+					<a href="">火锅</a>
+					<a href="">自助餐</a>
+					<a href="">小吃</a>
+					<a href="">快餐</a>
+					<a href="">日韩料理</a>
+					<a href="">西餐</a>
+					<a href="">聚餐</a>
+					<a href="">宴请</a>
+					<a href="">烧烤</a>
+					<a href="">烤肉</a>
+					<a href="">东北菜</a>
+					<a href="">川湘菜</a>
+					<a href="">江浙菜</a>
+					<a href="">香锅烤鱼</a>
+					<a href="">粤港菜</a>
+					<a href="">中式烧烤/烤串</a>
+					<a href=""西北菜</a>
+					<a href="">咖啡酒吧</a>
+					<a href="">茶馆</a>
+					<a href="">云贵菜</a>
+					<a href="">东南亚菜</a>
+					<a href="">海鲜素食台湾/客家菜</a>
+					<a href="">创意菜汤/粥/炖菜</a>
+					</div>
+				</div>
+			</a>
+			</li>
+
+			<li class = "toggleId">
+			<a href="" class = "toggleAId">
+			外卖
+				<div class="toggleContent">
+				<!--头-->
+					<div class = "idHead">
+					<a href="" class = "idHeadLeft">外卖</a>
+					<a href="" class = "idHeadRight">更多 &rsaquo;</a>
+					</div>
+				<!--内容-->
+					<div class = "idContent">
+					<a href="">美团外卖</a>
+					</div>
+				</div>
+			</a>
+			</li>
+
+			<li class = "toggleId"><a href="" class = "toggleAId">酒店</a><a href="" class = ".rightArrow">&rsaquo;</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">猫眼眼镜</a><a href="" class = ".rightArrow">&rsaquo;</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">休闲娱乐 / KTV</a><a href="" class = ".rightArrow">&rsaquo;</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">丽人 / 美发</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">结婚 / 婚纱摄影 / 婚宴</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">亲子 / 儿童乐园 / 幼教</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">运动健身</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">家装 / 建材 / 家居</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">学习培训 / 音乐培训</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">医疗健康 / 宠物 / 爱车</a></li>
+			<li class = "toggleId"><a href="" class = "toggleAId">酒吧 / 密室</a></li>
+		</ul>
+	</div>
+	<div class = "pictureRight">
+
+	<!--幻灯片部分-->
+	<div class="powerPointContainer">
+	<div class="pic" style="display: block;">
+		<a href=""><img src="../images/ddd.png" style = "width: 550px; height: 240px;" alt=""></a>
+	</div>
+
+	<div class="pic" style="display: none;">
+		<a href=""><img src="../images/Movie.png" style = "width: 550px; height: 240px;" alt=""></a>
+	</div>
+
+	<div class="pic" style="display: none;">
+		<a href=""><img src="../images/waimai.png" style = "width: 550px; height: 240px;" alt=""></a>
+	</div>
+
+	<div class="pic" style="display: none;">
+		<a href=""><img src="../images/food.png" style = "width: 550px; height: 240px;" alt=""></a>
+	</div>
+
+	<div class = "dotGroup">
+		<span class = "dot" onclick="currentSlide(4)" onmouseenter="currentSlide(4)">_</span>
+		<span class = "dot" onclick="currentSlide(3)" onmouseenter="currentSlide(3)">_</span>
+		<span class = "dot" onclick="currentSlide(2)" onmouseenter="currentSlide(2)">_</span>
+		<span class = "dot" onclick="currentSlide(1)" onmouseenter="currentSlide(1)">_</span>
+	</div>
+
+	<div class="prev">
+		<span class = "prevIcon" onclick="plusSlide(1)">&lsaquo;</span>
+	</div>
+
+	<div class="next">
+		<span class = "nextIcon" onclick="plusSlide(-1)">&rsaquo;</span>
+	</div>
+	</div>
+	<!--幻灯片部分结束-->
+	<!--其他图片-->
+	<div class = "otherPic">
+ 	<img class = "response" style = "width: 150px; height: 240px; position: absolute; top: 0px; left: 560px;" src="../images/pic1.png" alt="美团">
+	<img class = "response" style = "width: 271px; height: 165px; position: absolute; top: 250px; left: 0px;" src="../images/pic2.png" alt="美团">
+	<img class = "response" style = "width: 271px; height: 165px; position: absolute; top: 250px; left: 280px;" src="../images/pic3.png" alt="美团">
+	<img class = "response" style = "width: 150px; height: 165px; position: absolute; top: 250px; left: 560px;" src="../images/pic4.png" alt="美团">
+	<img style = "width: 230px; height: 168px; position: absolute; top: 250px; left: 720px; border: solid #ddd 1px;" src="../images/pic5.png" alt="美团">
+	<div class = "innerPic" style="width: 230px; height: 240px; position: absolute; top: 0px;left: 720px; border: solid #ddd 1px">
+		<img style = "width: 57px; height: 57px; position: relative; top: 28px; left: 83px; z-index: 4;" src="../images/pic6.png" alt="美团">
+		<p>Hi!  你好</p>
+		<button>注册</button>
+		<button>登陆</button>
+	</div>
+	</div>
+	</div></div>
+
+<!--中间选择卡-->
+<div class="switchContainer">
+<div class="switchHead">
+	<img style = "width: 67px; height: 30px; position: relative; top: 4px;" src="../images/gediao.png" alt="格调">
+	<span onmouseenter="display(event)">全部</span>
+	<span onmouseenter="display(event)">约会聚餐</span>
+	<span onmouseenter="display(event)">丽人SPA</span>
+	<span onmouseenter="display(event)">电影演出</span>
+	<span onmouseenter="display(event)">品质出游</span>
+</div>
+<div class="switchContent">
+	<div class="picGroup" style = "display: block;">
+	<div class = "partPic">
+		<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+
+	<div class="picGroup">
+	<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+	<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+
+	<div class="picGroup">
+	<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+	<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+
+	<div class="picGroup">
+			<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+	<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+			<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+
+	<div class="picGroup">
+	<div class = "partPic">
+		<img src="../images/s2.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">
+	<img src="../images/s1.png" alt="">
+		<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	<div class = "partPic">	
+		<img src="../images/s3.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s4.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+		<img src="../images/s6.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>	
+	<div class = "partPic">	
+			<img src="../images/s5.png" alt="">
+				<p>泛海国际影城</p>
+		<p class = "midP">可停车，儿童票，有WIFI</p>
+		<p>￥19.9<span>/人均</span></p>
+	</div>
+	</div>
+	</div>
+</div>
+
+
+<!--底部法律 height: 465px  left: 786px right: 1280-786px-->
+<div class="bottomPage">
+
+<!--底部左边-->
+<div class="bottomPageLeft">
+	<div class="sectionUl" id  = "section1">
+		<ul class = "innerUl">
+			<li><a href="" class = "firstLi">用户帮助</a></li>
+			<li><a href="">美团承诺</a></li>
+			<li><a href="">购物保障</a></li>
+			<li><a href="">申请退款</a></li>
+			<li><a href="">查看美团券密码</a></li>
+			<li><a href="">常见问题</a></li>
+			<li><a href="">用户协议</a></li>
+			<li><a href="">隐私政策</a></li>
+			<li><a href="">反诈骗公告</a></li>
+		</ul>
+	</div>
+	<div class="sectionUl" id  = "section2">	
+		<ul class = "innerUl">
+			<li><a href="" class = "firstLi">美团服务</a></li>
+			<li><a href="">美团外卖</a></li>
+			<li><a href="">猫眼电影</a></li>
+			<li><a href="">美团云</a></li>
+			<li><a href="">大众点评</a></li>
+		</ul>
+	</div>
+	<div class="sectionUl" id  = "section3">	
+		<ul class = "innerUl">
+			<li><a href="" class = "firstLi">商家合作</a></li>
+			<li><a href="">美食商家入驻（非外卖）</a></li>
+			<li><a href="">外卖商家入驻</a></li>
+			<li><a href="">酒店商家入驻</a></li>
+			<li><a href="">综合商家入驻</a></li>
+			<li><a href="">点餐秒付合作申请</a></li>
+			<li><a href="">美团点评智能收银机</a></li>
+			<li><a href="">聚宝盆餐饮开放平台</a></li>
+			<li><a href="">美团智能支付</a></li>
+		</ul>
+	</div>
+	<div class="sectionUl" id  = "section4">	
+		<ul class = "innerUl">
+			<li><a href="" class = "firstLi">代理商加盟</a></li>
+			<li><a href="">到店餐饮代理商招募</a></li>
+			<li><a href="">非餐饮代理商招募</a></li>
+			<li><a href="">美团联盟</a></li>
+		</ul>
+	</div>
+	<div class="sectionUl" id  = "section5">	
+		<ul class = "innerUl">
+			<li><a href="" class = "firstLi">行业规范</a></li>
+			<li><a href="">美团点评餐饮安全管理办法</a></li>
+		</ul>
+	</div>
+	<div class="sectionUl" id  = "section6">	
+		<ul class = "innerUl">
+			<li><a href="" class = "firstLi">廉正举报</a></li>
+			<li><a href="">廉正邮箱</a></li>
+		</ul>
+	</div>
+	<div class="sectionUl" id  = "section7">	
+		<ul class = "innerUl">
+			<li><a href="" class = "firstLi">关注美团</a></li>
+			<li><a href="">美团新浪微博</a></li>
+		</ul>
+	</div>
+	<div class="sectionUl" id  = "section8">	
+		<ul class = "innerUl">
+			<li><a href="" class = "firstLi">关于美团</a></li>
+			<li><a href="">媒体报道</a></li>
+		</ul>
+	</div>
+	<div class="sectionUl" id  = "section9">	
+		<ul class = "innerUl">
+			<li><a href="" class = "firstLi">公司信息</a></li>
+			<li><a href="">加入我们</a></li>
+			<li><a href="">法律声明</a></li>
+			<li><a href="">商户服务协议</a></li>
+		</ul>
+	</div>
+</div>
+
+<!--底部右边-->
+<div class="bottomPageRight">
+	<p style = "color:#06C1B1; font-size: 18px; font-weight: 500; margin-top: 123px">客服电话</p>
+	<p style = "font-size: 30px;color: #333;font-weight: 100; margin-left: 40px">10107888</p>
+	<p style = "font-size: 14px;color: #333;">（9:00-23:00）</p>
+</div>
+
+<!--网站最底部-->
+<div class = "realBottom" style = "margin-top: 1px; height: 114px; width: 100%; padding-top: 18px; background: #f8f8f8; border-top-color: solid grey 1px; border-top-width: 1170px; font-size: 12px">
+	<span style = "color: #666666; margin-left: 64px;">©美团网团购 meituan.com 京ICP证070791号</span>
+	<a href="">| 京ICP备10211739号 |</a>
+	<a href="">电子公告服务规则</a>
+	<p style="margin-top: 10px; margin-left: 64px;"><a href="">广播电视节目制作经营许可证（京）字第03889号</a></p>
+	<a href="" style = "float: right;">京公网安备1101;0502025545号</a>
+	<div style = "width: 326px; height: 38px; float: right; clear: right;">
+	<img src="../images/last_img.png" style = "width: 326px; height: 38px; margin-top: 10px">
+	</div>
+</div>
+
+</div>
+</body>
+</html>

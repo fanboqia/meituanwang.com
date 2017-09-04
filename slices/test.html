@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<title>美团网</title>	
+<style type="text/css">
+
+.powerPointContainer{
+	position: relative;
+}
+
+.dotGroup{
+	position: absolute;
+	z-index: 2;
+	left:30%;
+	bottom: 5%;
+	color: white;
+}
+
+.dot{
+	padding-left: 8px;
+}
+
+.powerPointContainer:hover .prev{
+	display: block;
+	opacity: 0.6;
+}
+
+.powerPointContainer:hover .next{
+	display: block;
+	opacity: 0.6;
+}
+
+.prev{
+	position: absolute;
+	display:none;
+	top:50%;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	background: black;
+	opacity: 0;
+	margin-top: 20px;
+	transition: opacity 0.3s ease;
+}
+
+.next{
+	position: absolute;
+	display: none;
+	top:50%;
+/*	left:500px;*/
+	right:0;
+	color: white;
+	font-weight: bold;
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	background: black;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	-webkit-transition: opacity .5s ease-in-out 1s; 
+	-o-transition: opacity .5s ease-in-out 1s; 
+	-moz-transition: opacity .5s ease-in-out 1s; 
+	transition: opacity .5s ease-in-out 1s;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+//active为激活
+//1.先关闭所有active
+//2.再所有active
+
+var index = 0;
+
+//*******************自动切换代码
+setInterval(function(){
+	var picture = document.getElementsByClassName("pic");
+	if(index > 3)
+		index = 0;
+	index++;
+	for (var i = picture.length - 1; i >= 0; i--) {
+		picture[i].style.display = "none";
+	}
+
+	picture[index-1].style.display = "block";
+
+},1500);
+//*******************end
+
+
+//*******************点击切换代码	
+var slideIndex = 1;
+
+function currentSlide(n){
+	slideIndex = n;
+	showSlide(slideIndex);
+}
+
+function plusSlide(num){
+	slideIndex +=  num;
+	showSlide(slideIndex);
+}
+
+function showSlide(currentIndex){
+
+	var picture = document.getElementsByClassName("pic");
+
+	if(currentIndex > 4)
+		slideIndex = 1;
+	else if(currentIndex < 1)
+		slideIndex = 4;
+
+	for (var i = picture.length - 1; i >= 0; i--) {
+		picture[i].style.display = "none";
+	}
+
+	picture[slideIndex-1].style.display = "block";
+}
+
+////*******************end
+
+</script>
+
+</head>
+<body>
+<div class="powerPointContainer">
+	<div class="pic" style="display: block;">
+		<a href=""><img src="../images/ddd.png" style = "width: 550px; height: 240px;" alt=""></a>
+	</div>
+
+	<div class="pic" style="display: none;">
+		<a href=""><img src="../images/Movie.png" style = "width: 550px; height: 240px;" alt=""></a>
+	</div>
+
+	<div class="pic" style="display: none;">
+		<a href=""><img src="../images/waimai.png" style = "width: 550px; height: 240px;" alt=""></a>
+	</div>
+
+	<div class="pic" style="display: none;">
+		<a href=""><img src="../images/food.png" style = "width: 550px; height: 240px;" alt=""></a>
+	</div>
+
+	<div class = "dotGroup">
+		<span class = "dot" onclick="currentSlide(4)" onmouseenter="currentSlide(4)">_</span>
+		<span class = "dot" onclick="currentSlide(3)" onmouseenter="currentSlide(3)">_</span>
+		<span class = "dot" onclick="currentSlide(2)" onmouseenter="currentSlide(2)">_</span>
+		<span class = "dot" onclick="currentSlide(1)" onmouseenter="currentSlide(1)">_</span>
+	</div>
+
+	<div class="prev">
+		<span class = "prevIcon" onclick="plusSlide(1)">&lsaquo;</span>
+	</div>
+
+	<div class="next">
+		<span class = "nextIcon" onclick="plusSlide(-1)">&rsaquo;</span>
+	</div>
+</div>
+</body>
+</html>

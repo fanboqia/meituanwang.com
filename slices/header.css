@@ -1,0 +1,611 @@
+/********************************************头部导航页******************************************************/
+/*导航页基本样式*/
+.header{
+	height: 31px;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	background: #f9f9f9;
+}
+
+/*左部导航栏*/
+.headLeft{
+	float: left;
+}
+
+.headLeft li{
+	float:left;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+}
+
+/*右部导航栏*/
+.headRight{
+	float: right;
+}
+
+.headRight li{
+	float:left;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+}
+
+.header li a{
+	text-decoration:none;
+}
+
+.toggleUl{
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.toggleUl li{
+	float: none;
+	padding: 0px 5px 5px 5px;
+	background: #f8f8f8;
+}
+
+/*下拉列表*/
+.toggleUl li:hover{
+	background-color: #f9f9f9;
+	cursor: pointer;
+}
+
+/*显示下拉列表*/
+.toggleLi:hover .toggleUl{
+	display: block;
+	margin-top: 1px;
+	-moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+	box-shadow: 1px 1px 10px #888888;
+}
+
+/*设置下拉列表的位置*/
+.toggleUl{
+	display: none;
+	position:absolute;
+	z-index: 1;
+}
+
+/*相对位置*/
+.toggleA{
+	position: relative;
+}
+/********************************************头部导航页 结束******************************************************/
+
+/********************************************搜索部分 ******************************************************/
+/*搜索部分的大小*/
+.searchPart{
+	width: 100%;
+	height: 156px;
+	background: #ffffff;
+}
+
+/*搜索栏的样式*/
+#searchBar{
+	position: absolute;
+	top:69px;
+	left:367px;
+	width:466px;
+	height:42px;
+	line-height: 42px;
+	border: #29d0be solid 1px;
+	border-radius: 5px;
+	font:15px;
+	outline: none;
+}
+
+/*搜索栏下方字幕*/
+.searchUnderText{
+	position: relative;
+	top:90px;
+	left: 375px;
+}
+
+.searchUnderText a{
+	font-size: 12px;
+	color:#999;
+	margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+.searchPopUp{
+	display: none;
+	position: absolute;
+	top:118px;
+	left:366px;
+	padding: 15px 15px 16px 10px;
+	box-shadow: 1px 1px 10px #888888;
+	background: #ffffff;
+	z-index: 1;
+	border-radius: 5px;
+}
+
+.searchPopUp a{
+	margin-bottom: 15px; 
+}
+
+.searchPopUp p{
+	font-size:10px;
+	padding: 0 0 15px 0;
+	margin: 0;
+	color: #999;
+}
+
+.classify{
+	width:100%;
+	height: 50px;
+	/*border: #ddd solid;*/
+	position: absolute;
+	top:150px;
+	left: 330px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.selectionLeftUpPart p{
+	position: absolute;
+	top: 140px;
+	left: 45px;
+	text-align: left;
+	line-height: 50px;
+	outline-width: 230px;
+	padding-left: 20px;
+	font-size: 16px;
+	background: #02b49d;
+	color: white;
+	width: 210px;
+	height: 50px;
+}
+
+.classify a{
+	color:black;
+	font-size: 16px;
+	margin-right: 40px;
+}
+
+.classify #a1:hover{
+	color: #fbc700;
+}
+
+.classify #a2:hover{
+	color: red;
+}
+/********************************************搜索部分 结束******************************************************/
+
+/********************************************选择卡部分 ******************************************************/
+.selection{
+	height: 438px;
+	width: 100%;
+	background: #f8f8f8;
+	position: relative;
+	margin-left: 45px;
+}
+
+.leftSelection{
+	height: 424px;
+	width: 230px;
+	/*border: solid #ddd;*/
+	background: #02b49d;
+}
+
+.leftSelection a{
+	color: white;
+	display: inline-block;
+	padding-left: 20px;
+	padding-top:8px;
+	padding-bottom: 8px;
+}
+
+/*显示下拉列表*/
+.toggleId:hover .toggleContent{
+	display: block;
+	margin-top: 1px;
+	-moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+	box-shadow: 1px 1px 10px #888888;
+}
+
+/*设置下拉列表的位置*/
+.toggleContent{
+	display: none;
+	position:absolute;
+	z-index: 1;
+	top: 0px;
+	left: 18%;
+	width: 398px;
+	height:422px;
+	background: #ffffff;
+}
+
+/*改变选项卡背景颜色*/
+.toggleId:hover{
+	background: #37bfb3;
+}
+
+/*设置左边颜色*/
+.toggleId:hover .toggleAId{
+	color: white;
+}
+
+/*头部样式*/
+.idHead{
+	overflow: auto;
+	border-bottom: solid #ddd 1px;
+    margin-top: -20px;
+}
+
+/*每个内容的排列是float*/
+.idContent a{
+	float: left;
+	font-size: 12px;
+}
+
+/*头部left*/
+.idHeadLeft{
+	float: left;
+	color: black;
+}
+
+/*头部right*/
+.idHeadRight{
+	float: right;
+	margin-right: 10px;
+}
+
+/*弹出窗口*/
+.toggleContent a{
+	color: grey;
+}
+
+/*弹出窗口位置*/
+/*.toggleId{
+	position: relative;
+}*/
+
+.toggleAId{
+	position: relative;
+}
+
+.rightArrow{
+	color: white;
+}
+
+/********************************************选项卡部分 结束******************************************************/
+
+/********************************************幻灯片部分******************************************************/
+.pictureRight{
+	position: absolute;
+	top:10px;
+	left:19%;
+}
+
+.powerPointContainer{
+	position: absolute;
+}
+
+.dotGroup{
+	position: absolute;
+	z-index: 2;
+	left:42%;
+	bottom: 5%;
+	color: transparent;
+}
+
+.dot{
+	padding-left: 8px;
+}
+
+.powerPointContainer:hover .prev{
+	display: block;
+	opacity: 0.6;
+}
+
+.powerPointContainer:hover .next{
+	display: block;
+	opacity: 0.6;
+}
+
+.prev{
+	position: absolute;
+	display:none;
+	top:35%;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background: black;
+	opacity: 0;
+	margin-top: 20px;
+	transition: opacity 0.3s ease;
+	z-index: 4;
+}
+
+.prevIcon{
+	position: absolute;
+	top:-3px;
+	left:11px;
+}
+
+.nextIcon{
+	position: absolute;
+	top:-3px;
+	right:13px;
+}
+
+.next{
+	font-size: 40px;
+	position: absolute;
+	display: none;
+	top:40%;
+	right:0;
+	color: white;
+	font-weight: bold;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background: black;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	-webkit-transition: opacity .5s ease-in-out 1s; 
+	-o-transition: opacity .5s ease-in-out 1s; 
+	-moz-transition: opacity .5s ease-in-out 1s; 
+	transition: opacity .5s ease-in-out 1s;
+	z-index: 4;
+}
+/********************************************幻灯片部分 end******************************************************/
+
+/********************************************图片组部分******************************************************/
+.pictureRight .response:hover{
+	box-shadow: 1px 1px 10px #888888;
+	transition: 0.3s;
+}
+
+.innerPic{
+	background: #fff;
+}
+
+.innerPic p{
+	font-family: arial;
+	position: relative;
+	top: 34px;
+	left: 80px;
+}
+
+.innerPic button{
+	position: relative;
+	border-color: #f6f6f6;
+	width: 117px;
+	height: 38px;
+	border-radius: 20px;
+	border-bottom-style: none;
+	border-right-style: none;
+	padding: 3px 20px;
+	background: #fff;
+	left: 23%;
+	top: 45px;
+	margin-top: 10px;
+	transition: 0.4s;
+}
+
+.innerPic button:hover{
+	background: #f6f6f6;
+}
+
+/*.otherPic img:hover{
+	box-shadow: 1px 1px 10px #888888;
+}*/
+/********************************************图片组部分 end******************************************************/
+
+/********************************************中间选择卡******************************************************/
+body{
+	background: #f8f8f8;
+}
+
+.switchContainer{
+	width: 1190px;
+	height: 720px;
+/*	border: #ddd solid 1px;*/
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 45px;
+}
+
+.switchHead{
+	width: 1160px;
+	position: relative;
+	border: #ddd solid 1px;
+	padding:14px 15px;
+	font-size: 14px;
+	background: #c1af8c;
+	color: white;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+}
+
+.switchHead span{
+	margin-left: 10px;
+}
+
+.picGroup img{
+	width:360px;
+	height: 210px;
+}
+
+/*图片组切换*/
+.picGroup{
+	display: none;
+	border: solid #ddd 1px;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	overflow: hidden;
+	background: white;
+}
+
+/*每个图片部分*/
+.partPic{
+	width:381px;
+	height:315px;
+	float: left;
+/*	border: solid #ddd 1px;*/
+	margin: 5px;
+	background: white;
+	border-radius: 5px;
+	transition: 0.4s;
+	margin-left: 10px;
+}
+
+.partPic img{
+	margin:10px;
+	border-radius: 5px;
+}
+
+.partPic:hover{
+	background: #f4f4f4;
+}
+
+.partPic p{
+	margin-top: 8px;
+	padding-left: 10px;
+}
+
+.midP{
+	color:grey;
+	font-size: 12px;
+}
+
+.partPic p:last-child{
+	color:#c1af8c;
+	font-size: 24px;
+}
+
+.partPic p:last-child span{
+	font-size: 12px;
+}
+
+/********************************************中间选择卡 end******************************************************/
+
+
+
+/********************************************底部法律******************************************************/
+.bottomPage{
+	position: relative;
+	border-bottom: solid #ddd 1px;
+	border-bottom-width: 1170px;
+	border-top: solid #ddd 1px;
+	width: 100%;
+	height: 465px;
+	background: #f8f8f8;
+	top: 10px;
+}
+
+.bottomPageLeft{
+	position: relative;
+	width: 910px;
+	height: 465px;
+/*	border: solid #ddd 1px;*/
+}
+
+.firstLi{
+	color: black;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.firstLi:hover{
+	color: black;
+}
+
+.sectionUl{
+	position: absolute;
+	display:block;
+/*	border: #ddd solid 1px;*/
+}
+
+.sectionUl li{
+	margin: 6px 1px;
+}
+
+.innerUl{
+	margin: 15px 85px;
+}
+
+.innerUl a{
+	font-size: 14px;
+}
+
+#section1{
+	position: absolute;
+	top: 28px;
+	left:2px;
+}
+
+#section2{
+	position: absolute;
+	top: 233px;
+	left:2px;
+}
+
+#section3{
+	position: absolute;	
+	top: 28px;
+	left:215px;
+}
+
+#section4{
+	position: absolute;
+	top: 28px;
+	left:437px;
+}
+
+#section5{
+	position: absolute;	
+	top: 120px;
+	left:437px;
+}
+
+#section6{
+	position: absolute;
+	top: 182px;
+	left: 437px;	
+}
+
+#section7{
+	position: absolute;	
+	top: 28px;
+	left: 650px;
+}
+
+#section8{
+	position: absolute;
+	top: 98px;
+	left:650px;
+}
+
+#section9{
+	position: absolute;	
+	top: 152px;
+	left: 650px;
+}
+
+.bottomPageRight{
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 5;
+	width: 370px;
+	height:465px;
+/*	border: solid #ddd 1px;*/
+	background-color: #f8f8f8;
+}
+
+.bottomPageRight p{
+	text-align: center;
+	margin-top: 10px;
+}
+/********************************************底部法律 end******************************************************/

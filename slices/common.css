@@ -1,0 +1,37 @@
+/*font color*/
+.fontColor{
+	color: #666666;
+}
+
+/*header background*/
+.headerBgColor{
+	color: #f9f9f9;
+}
+
+.orangeFontColor{
+	color: #f56a3f;
+}
+
+.greenBlueColor{
+	color:#35b7aa;
+}
+
+.blackColor{
+	color: #333333;
+}
+
+.whiteColor{
+	color: #ffffff;
+}
+
+.fontStyle{
+
+}
+
+a{
+	color: #666666;
+}
+
+a:hover{
+	color:#35b7aa;
+}
