@@ -35,3 +35,8 @@ a{
 a:hover{
 	color:#35b7aa;
 }
+
+.page{
+	height: 1970px;
+	overflow: hidden;
+}
